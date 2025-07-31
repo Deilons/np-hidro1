@@ -1,0 +1,53 @@
+/* Directivas de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Capa base para estilos globales personalizados */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Aseguramos que el body ocupe todo el ancho y no tenga márgenes por defecto */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    /* Establece un color de fondo por defecto si no se especifica en los componentes */
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  /* Eliminar estilos por defecto de #root que interfieren con Tailwind */
+  #root {
+    margin: 0;
+    padding: 0;
+    max-width: none; /* Elimina la limitación de ancho */
+    text-align: left; /* Restablece la alineación de texto */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  }
+}
+
+/* Capa de componentes para clases personalizadas de Tailwind */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Eliminar estilos de logo y animaciones de Vite que no son necesarios */
+/* .logo, .logo:hover, .logo.react:hover, @keyframes logo-spin, @media (prefers-reduced-motion: no-preference), .card, .read-the-docs ya no son necesarios */
