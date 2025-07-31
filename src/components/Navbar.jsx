@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <Droplets className="h-8 w-8 text-green-400 mr-2" />
-              <span className="text-white text-xl font-bold">HIDROLAVADORA</span>
+              <span className="text-white text-xl font-bold">NP HIDRO</span>
             </div>
           </div>
 
