@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Zap, Award } from "lucide-react"
 import lavado from "../assets/lavadoIndu.webp"
 const Hero = () => {
   return (
-    <section className="bg-gradient-hero min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-gradient-hero min-h-screen flex items-center relative overflow-hidden pt-16 pb-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
